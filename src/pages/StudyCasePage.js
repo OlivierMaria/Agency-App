@@ -1,6 +1,6 @@
 import React from "react";
 import StudyCase from "../components/StudyCase.js";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const StudyCasePage = () => {
   const { client } = useParams();
@@ -13,6 +13,12 @@ const StudyCasePage = () => {
         </h1>
         <div className="bg-white shadow rounded-lg p-6">
           <StudyCase client={client} />
+
+          <div class="flex justify-center mt-4">
+            <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <Link to="/works">Retour</Link>
+            </button>
+          </div>
         </div>
       </div>
     </div>
